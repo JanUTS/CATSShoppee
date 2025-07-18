@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Shopee Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container profile">
+    <h1 class="title">Welcome to Shopee!</h1>
+    <img src="OrangeLog.png" alt="Shopee" width="120">
+    <div class="profile-box" id="profileBox">
+      <!-- Profile info will be injected here -->
+    </div>
+  </div>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem('shopeeUser'));
+
+    const profileBox = document.getElementById('profileBox');
+
+    if (user) {
+      profileBox.innerHTML = `
+        <p><strong>Name:</strong> ${user.name}</p>
+        <p><strong>Email:</strong> ${user.email}</p>
+        <p><strong>Username:</strong> ${user.username}</p>
+        <p><strong>Address:</strong> ${user.address}</p>
+        <p><strong>Password:</strong> ${user.password}</p>
+        <button onclick="clearProfile()">Clear Profile</button>
+      `;
+    } else {
+      profileBox.innerHTML = "<p>No profile data found. Please sign up first.</p>";
+    }
+
+    function clearProfile() {
+      localStorage.removeItem('shopeeUser');
+      window.location.href = 'signup.html';
+    }
+  </script>
+</body>
+</html>

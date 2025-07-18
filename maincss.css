@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+}
+
+#navbar{
+    background-image: url("navBag.png");
+    color: white;
+    padding-left: 150px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    height: 130px;
+    position: sticky;
+}
+#navbar, a{
+    font-size: 14px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Raleway", sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+img{
+    width: 180px;
+    margin-top: 10px;
+    margin-left: -18px;
+}
+.searchbar{
+    position: absolute;
+    scale: 2.3;
+    width: 23%;
+    margin-top: 55px;
+    margin-left: 280px;
+    border: none;
+    
+}
+.prod1 {
+    position: absolute;
+
+    scale: 1;
+    margin: 100px;
+    font-family: "Raleway", sans-serif;
+    width: 12%;
+    border: 1px solid rgb(236, 236, 236);
+}
+
+.prod1, img {
+    margin: 2px;
+}
+
+.presyo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+}
+
+.popUp {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: orangered;
+    display: none; /* Hide by default */
+}
+
+
+.prod1:hover .popUp {
+    display: block;
+}
+
+.prod1:hover {
+    border: 1px solid orangered;
+    scale: 1.1;
+    margin: 40px;
+}
+
+.shoppingcart
+{
+    width: 50px;
+    margin-left: 900px;
+    margin-bottom: 10px;
+}
+
+.prod2 {
+    
+    margin-right: -300px;
+    scale: 1;
+    margin: 200px;
+    margin-top: 3px;
+    font-family: "Raleway", sans-serif;
+    width: 12%;
+    border: 1px solid rgb(236, 236, 236);
+}
+
+
+.presyo {
+    font-family: Arial, Helvetica, sans-serif;
+    color: orangered;
+}
+
+.popUp {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    background-color: orangered;
+    display: none; /* Hide by default */
+}
+
+
+.prod2:hover .popUp {
+    display: block;
+}
+
+.prod2:hover {
+    border: 1px solid orangered;
+    scale: 1.1;
+    margin: 40px;
+}
+
+
+.signupbut
+{
+    margin-left: 800px;
+}

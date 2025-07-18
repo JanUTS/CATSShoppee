@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopee Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Shopee Sign Up</h1>
+    <form id="signupForm">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="text" id="address" placeholder="Address" required>
+      <button type="submit">Create Account</button>
+    </form>
+    <p class="footer">Already have an account? <a href="#">Log In</a></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('signupForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const userData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value,
+        username: document.getElementById('username').value,
+        address: document.getElementById('address').value
+      };
+
+      // Save to localStorage
+      localStorage.setItem('shopeeUser', JSON.stringify(userData));
+
+      // Redirect to profile page
+      window.location.href = 'profile.html';
+    });
+  </script>
+</body>
+</html>
